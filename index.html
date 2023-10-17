@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorMatch</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div id="toolbar" class="grid-container" oncontextmenu="return false">
+                <div class="grid-item">
+                    <button id="scoreButton" onclick="showHighscores()">🏆</button>
+                    <select id="selectSize">
+                        <option value="4">4x4</option>
+                        <option selected value="5">5x5</option>
+                        <option value="6">6x6</option>
+                        <option value="7">7x7</option>
+                        <option value="8">8x8</option>
+                        <option value="9">9x9</option>
+                        <option value="10">10x10</option>
+                        <option value="11">11x11</option>
+                        <option value="12">12x12</option>
+                        <option value="13">13x13</option>
+                        <option value="14">14x14</option>
+                    </select>
+                    <button onclick="selectColors()" id="colorButton">🎨 4</button>
+                    <button onclick="selectGamemode()" id="gameModeButton">rounds: 1</button>
+                    <button onclick="startGame()">start</button>
+                </div>
+                <button id="roundData" class="grid-item">
+                    <span id="roundDiv">R1</span>
+                    <div id="turnDiv"> 00/99</div>
+                    <span id="timer">0:00</span>
+                    <div id="scoreDiv">0</div>
+                </button>
+            </div>
+
+            <div class="grid-item" id="tableId">
+
+                <div id="scoreBoard" class="grid-container scoreBoard" oncontextmenu="return false"
+                    ondragstart="return false">
+                    <div id="innerSB" class="grid-container innerSB">
+                        <div id="sbRoundFormatId" class="sbGrid-item "></div>
+                        <div id="sbTime" class="sbGrid-item"></div>
+                        <div id="sbScore" class="sbGrid-item"></div>
+                    </div>
+
+                </div>
+                <div id="currentBoard" class="grid-container scoreBoard" oncontextmenu="return false"
+                    ondragstart="return false">
+                    <div id="currentSB" class="grid-container innerSB">
+                        <div id="cRoundId" class="sbGrid-item "></div>
+                        <div id="cTime" class="sbGrid-item"></div>
+                        <div id="cScore" class="sbGrid-item"></div>
+                    </div>
+                </div>
+                <div class="grid-container example" id="exampleDiv" oncontextmenu="return false"
+                    ondragstart="return false">
+                    <img src="solved example.png" style="width:80.4vmin" id="solved_example">
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
