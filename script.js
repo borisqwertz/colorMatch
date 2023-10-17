@@ -664,9 +664,3 @@ function hideSB() {
   scoreBoard.style.zIndex = "-1";
   scoreBoard.style.visibility = "hidden";
 }
-
-//TODO
-/*
--80%- code cleanup
-// console.log
-*/
